@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  *
  *   main - main block
@@ -9,7 +8,6 @@
  */
 
 int main(void)
-i
 {
 
 		puts("\"Programming is like building a multilingual puzzle");
