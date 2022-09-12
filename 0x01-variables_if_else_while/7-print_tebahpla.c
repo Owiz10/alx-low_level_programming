@@ -3,21 +3,20 @@
 /**
  * main - entry
  *
- * Return: 0 if successful (Always)
+ * Return: 0 if successful
  *
  */
 
 int main(void)
 {
-
 	char ch;
 
-	for (ch = 'z'; ch >= 'a'; ch--)
+		for (ch = 'z'; ch >= 'a'; ch--)
 
-		putchar(ch);
+			putchar(ch);
 
 		putchar('\n');
 
-		return (0);
+	return (0);
 
 }
