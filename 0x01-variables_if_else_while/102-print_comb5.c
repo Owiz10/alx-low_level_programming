@@ -25,26 +25,17 @@ int main(void)
 			for (d4 = d2 + 1; d4 <= '9'; d4++)
 				{
 				putchar(d1);
-
 				putchar(d2);
-
 				putchar(' ');
-
 				putchar(d3);
-
 				putchar(d4);
-
 				putchar(',');
-
 				putchar(' ');
 
 				}
 				}
-
-
 
 		} putchar('\n');
-
 	return (0);
 
 }
