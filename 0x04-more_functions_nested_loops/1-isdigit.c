@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  *  _isdigit	-	checks the input if it is a digit
  *
  *  @c:			The input to be printed
@@ -13,18 +12,16 @@
 int _isdigit(int c)
 
 {
-
 	int item;
 
 	for (item = '0'; item <= '9'; item++)
+		{
 
-			{
+			if (item == c)
 
-				if (item == c)
+			return (1);
 
-				return (1);
-
-			}
+		}
 
 	return (0);
 
