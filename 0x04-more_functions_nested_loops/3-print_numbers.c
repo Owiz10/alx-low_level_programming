@@ -11,10 +11,10 @@ void print_numbers(void)
 	char no;
 
 		for (no = '0'; no <= '9'; no++)
+		{
+		putchar(no);
+		}
 
-		_putchar(no);
-
-
-	_putchar('\n');
+	putchar('\n');
 
 }
