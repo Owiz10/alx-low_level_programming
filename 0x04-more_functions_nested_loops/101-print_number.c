@@ -13,8 +13,8 @@ void print_number(int n)
 
 	int num = n;
 
-	putchar(num + '0');
+	_putchar(num + '0');
 
-	putchar('\n');
+	_putchar('\n');
 
 }
