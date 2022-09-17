@@ -26,13 +26,13 @@ void print_diagonal(int n)
 
 				int laps = count;
 					while (laps > 0)
-						{
+					{
 
-							putchar(' ');
+						putchar(' ');
 
-							laps--;
+						laps--;
 
-						}
+					}
 
 					putchar('\\');
 
