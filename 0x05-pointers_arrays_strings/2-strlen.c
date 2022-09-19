@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _strlen - a function that returns the length of a string
@@ -26,5 +26,5 @@ int _strlen(char *s)
 
 		}
 
-					return (sum);
+	return (sum);
 }
