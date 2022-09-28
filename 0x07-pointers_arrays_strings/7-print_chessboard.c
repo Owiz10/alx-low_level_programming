@@ -6,8 +6,6 @@
  *
  *  @a: an array input to print
  *
- *  _putchar: to print output of characters
- *
  *  Return: Nothing
  */
 
