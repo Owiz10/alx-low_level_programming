@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * factorial - gets factorial of n
+ * _strlen_recursion - Returns The Length of String
  *
- * @n: integer
+ * @s: string
  *
  * Return: 1 if successful
  *
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int factorial(int n)
+int _strlen_recursion(char *s)
 
 {
 
-	if (n < 0)
+	if (*s != '\0')
 
-	return (-1);
+	{
 
-	if (n == 0)
+		return (1 + _strlen_recursion(s + 1));
 
-	return (1);
+	}
 
-	return (n * factorial(n - 1));
+	return (0);
 
 }
