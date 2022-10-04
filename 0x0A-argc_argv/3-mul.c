@@ -1,9 +1,8 @@
 /*#include "main.h" */
-
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- *
  * main -	Multiplies two numbers
  *
  * @argc:	Number of arguments passed to the program
@@ -15,7 +14,6 @@
  */
 
 int main(int argc, char *argv[])
-
 {
 
 	if (argc != 3)
@@ -41,7 +39,7 @@ int main(int argc, char *argv[])
 	int b = atol(argv[2]);
 
 	int c = a * b;
-	
+
 	printf("%i\n", c);
 
 	return (0);
