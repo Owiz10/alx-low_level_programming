@@ -1,18 +1,28 @@
 #include "main.h"
 
 /**
- * _isdigit-checks for a digit (0 through 9)
+ *  _isdigit	-	checks the input if it is a digit
  *
- * @c: int to be checked
+ *  @c:			The input to be printed
  *
- * Return: 1 if c is a digit, 0 otherwise
+ *  Return:	-	1 if c is a digit else, 0
  *
  */
 
 int _isdigit(int c)
 
 {
+	int item;
 
-	return (c >= '0' && c <= '9');
+		for (item = '0'; item <= '9'; item++)
+		{
+
+			if (item == c)
+
+			return (1);
+
+		}
+
+	return (0);
 
 }
