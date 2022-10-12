@@ -3,13 +3,13 @@
 /**
  * print_last_digit - last digit of a number
  *
- * @number: number to be analysed
+ * @n: number to be analysed
  *
  * Return: last digit
  *
  */
 
-int print_last_digit(int number)
+int print_last_digit(int n)
 {
 
 	int nv;
