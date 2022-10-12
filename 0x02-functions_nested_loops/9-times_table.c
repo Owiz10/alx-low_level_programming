@@ -21,7 +21,7 @@ void times_table(void)
 		{
 			int result = stop * start;
 
-			printf(", %i", result);
+			printf(" %i,", result);
 
 		}
 
