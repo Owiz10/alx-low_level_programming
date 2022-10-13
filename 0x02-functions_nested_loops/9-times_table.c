@@ -22,7 +22,7 @@ void times_table(void)
 
 			int result = stop * start;
 
-			printf("%3d", result);
+			printf("%3d,", result);
 
 
 		}
