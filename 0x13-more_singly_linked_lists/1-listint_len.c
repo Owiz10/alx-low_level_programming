@@ -5,7 +5,7 @@
  *
  * @h: pointer to the first element
  *
- * eturn: the number of elements
+ *  Return: the number of elements
  */
 
 size_t listint_len(const listint_t *h)
