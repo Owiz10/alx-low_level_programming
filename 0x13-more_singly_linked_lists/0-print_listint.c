@@ -29,11 +29,11 @@ size_t print_listint(const listint_t *h)
 
 				}
 
-						if (h->next == NULL)
+				if (h->next == NULL)
 
-						return (size);
+					return (size);
 
-							node = h->next;
+					node = h->next;
 
 
 			for (; node != NULL; size++, node = node->next)
