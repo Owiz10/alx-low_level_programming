@@ -52,7 +52,7 @@ int _atoi(const char *s)
 		resp += (s[i] - 48);
 	}
 
-	return (sign *resp);
+	return (sign * resp);
 }
 
 /**
