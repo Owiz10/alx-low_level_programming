@@ -1,110 +1,119 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
+
+#define true 1
+#define false 0
 
 /**
- * _puts - prints a string, followed by a new line,
+ * areint -	Checks if a character is an integer
  *
- * @str: pointer to the string to print
+ * @str:		The string containing the characters to be tested
  *
- * Return: void
+ * Return:	true if all characters are integers
+ *
+ * false if any charcater is not an integer
  *
  */
 
-void _puts(char *str)
+int areint(char *str)
 {
-	int i = 0;
+	int i;
 
-	while (str[i])
+	int len;
+
+	len = strlen(str);
+
+	for (i = 0; i < len; i++)
 	{
-		_putchar(str[i]);
 
-		i++;
+		if (str[i] < '0' || str[i] > '9')
+		return (false);
+
 	}
+
+	return (true);
 }
 
 /**
- * _atoi - convert a string to an integer.
+ * allargsareint - checks if all the arguments passed to the program are int
  *
- * @s: char type string
+ * * @count: Number of arguments passed to the program
  *
- * Return: integer converted
+ * * @str: All the arguments passed to the program
+ *
+ * * Return: true if all the arguments are integers
+ *
+ *  false if any argument is not an integer
  *
  */
 
-int _atoi(const char *s)
+int allargsareint(int count, char **str)
 {
-	int sign = 1;
+	int i;
 
-	unsigned long int resp = 0, firstNum, i;
+	char *string;
 
-	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	for (i = 1; i < count; i++)
 	{
-		if (s[firstNum] == '-')
-		{
-			sign *= -1;
-		}
+		string = str[i];
+
+		if (areint(string) != true)
+
+		return (false);
+
 	}
 
-	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
-	{
-		resp *= 10;
-
-		resp += (s[i] - 48);
-	}
-
-	return (sign * resp);
+	return (true);
 }
 
 /**
- * print_int - prints an integer.
+ * main -	Multiplies two integers
  *
- * @n: int
+ * @argc:	Number of arguments passed
  *
- * Return: 0
+ * @argv:	Integers to be multiplied
  *
- */
-
-void print_int(unsigned long int n)
-{
-	unsigned  long int divisor = 1, i, resp;
-
-	for (i = 0; n / divisor > 9; i++, divisor *= 10)
-
-		;
-
-	for (; divisor >= 1; n %= divisor, divisor /= 10)
-	{
-		resp = n / divisor;
-
-		_putchar('0' + resp);
-	}
-}
-
-/**
- * main - print the result of the multiplication, followed by a new line
+ * Return:	98 if number of arguments is incorrect
  *
- * @argc: int
+ *		98 if all the inputs aren't integers
  *
- * @argv: list
- *
- * Return: 0
+ *		0 on successful execution
  *
  */
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
-	(void)argc;
-
 	if (argc != 3)
 	{
-		_puts("Error ");
 
-		exit(98);
+		printf("Error\n");
+
+		return (98);
+
 	}
 
-	print_int(_atoi(argv[1]) * _atoi(argv[2]));
+	else if (allargsareint(argc, argv) == false)
 
-	_putchar('\n');
+	{
+		printf("Error\n");
 
-	return (0);
+		return (98);
+
+	}
+
+	else
+
+	{
+		int num1 = atoi(argv[1]);
+
+		int num2 = atoi(argv[2]);
+
+		int result = num1 * num2;
+
+		printf("%i\n", result);
+
+		return (0);
+	}
 }
