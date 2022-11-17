@@ -13,7 +13,7 @@ void print_alphabet(void)
 
 		char item;
 
-		for ( item = 'a'; item <= 'z'; item++)
+		for (item = 'a'; item <= 'z'; item++)
 		{
 			_putchar(item);
 

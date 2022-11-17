@@ -13,19 +13,31 @@ void times_table(void)
 
 	int stop = 0;
 
-	for (start = 0; start <= 9; start++)
+	int result;
 
+	for (start = 0; start <= 9; start++)
 	{
 
 		for (stop = 0; stop <= 9; stop++)
 		{
 
-			int result = stop * start;
+			 result = stop * start;
 
-			printf("%3d,", result);
+			if (stop >= 9)
+			{
+				printf("  %6i", result);
+			}
+			else
 
+			printf(", %6i", result);
 
 		}
+
+	printf("%6i,", result);
+
+
+
+	}
 
 		printf("\n");
 

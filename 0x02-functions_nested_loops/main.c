@@ -11,7 +11,8 @@ int main(void)
 
 {
 
-		print_alphabet();
+/*		print_alphabet(); */
+	times_table();
 
 			return (0);
 
